@@ -1,0 +1,17 @@
+<template name="show_icon">
+    <h4>test</h4>
+    <ul>
+        <div class="row">
+            {{#each show}}
+                <li id="main_icon_1"><i class="large material-icons col s4">{{this.name}}</i></li>
+            {{/each}}
+        </div>
+    </ul>
+    <ul>
+        <div class="row">
+            {{#each sub_show}}
+                <li id="main_icon_1"><i class="large material-icons col s4">{{this.name}}</i></li>
+            {{/each}}
+        </div>
+    </ul>
+</template>
