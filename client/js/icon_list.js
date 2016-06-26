@@ -1,4 +1,4 @@
-Template.icon_list.helpers({
+Template.iconList.helpers({
     icon_main : function () {
         return TE.find({part:'main'});
     },
@@ -14,7 +14,7 @@ Template.icon.maybe_selected = function(){
 Template.sub_icon.sub_maybe_selected = function(){
     return Session.equals('sub_select_icon', this._id)? 'orange600':"";
 }
-Template.icon_list.events({
+Template.iconList.events({
    'click #main_icon_1':function(){
        Session.set('select_icon', this._id);
    },
@@ -23,7 +23,18 @@ Template.icon_list.events({
     }
 });
 
-Template.show_icon.helpers({
+Template.showIcon.helpers({
+    show: function(){
+        var Icon_id =Session.get('select_icon');
+        return TE.find({_id:Icon_id});
+    },
+    sub_show: function(){
+        var Icon_id =Session.get('sub_select_icon');
+        return TE.find({_id:Icon_id});
+    }
+});
+
+Template.selected_icon.helpers({
     show: function(){
         var Icon_id =Session.get('select_icon');
         return TE.find({_id:Icon_id});

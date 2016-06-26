@@ -1,16 +1,15 @@
-<template name="show_icon">
-    <h4>test</h4>
+<template name="showIcon">
+    <h5>답변을 해주실 수 있겠습니까?</h5>
     <ul>
-        <div class="row">
+        <div class="row valign-wrapper">
             {{#each show}}
-                <li id="main_icon_1"><i class="large material-icons col s4">{{this.name}}</i></li>
+                <li><i class="big2 material-icons col s4 valign">{{this.name}}</i></li>
             {{/each}}
         </div>
-    </ul>
-    <ul>
-        <div class="row">
+
+        <div class="row center-align">
             {{#each sub_show}}
-                <li id="main_icon_1"><i class="large material-icons col s4">{{this.name}}</i></li>
+                <li><i class="big2 material-icons col s4">{{this.name}}</i></li>
             {{/each}}
         </div>
     </ul>

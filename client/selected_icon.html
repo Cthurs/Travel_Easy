@@ -1,0 +1,12 @@
+<template name="selected_icon">
+    <ul>
+        <div class="row valign-wrapper">
+            {{#each show}}
+                <li><i class="large material-icons col s4 valign">{{this.name}}</i></li>
+            {{/each}}
+            {{#each sub_show}}
+                <li><i class="large material-icons col s4">{{this.name}}</i></li>
+            {{/each}}
+        </div>
+    </ul>
+</template>

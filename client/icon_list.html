@@ -1,5 +1,5 @@
-<template name="icon_list">
-    <h3>main Icon</h3>
+<template name="iconList">
+    <h5 class="teal-text btn-flat disabled center-align">main icon</h5>
     <ul>
         <div class="row">
             {{#each icon_main}}
@@ -8,7 +8,7 @@
         </div>
     </ul>
 
-    <h4>sub Icon</h4>
+    <h5 class="teal-text btn-flat disabled center-align">sub icon</h5>
     <ul>
         <div class="row">
             {{#each icon_sub}}
@@ -16,8 +16,16 @@
             {{/each}}
         </div>
     </ul>
-    <button class="btn waves-effect waves-light" type="submit" name="action">Confirm
-        <i class="material-icons right">send</i>
-    </button>
-    {{>show_icon}}
+
+    <a class="show_icon" href="{{pathFor 'showIcon'}}">
+        <h5 class="teal-text btn-flat disabled center-align">selected icon</h5>
+        <div id="picked_icon">
+            {{>selected_icon}}
+        </div>
+    </a>
+    <!--<button class="btn waves-effect waves-light right-align valign" type="submit" name="action">Confirm-->
+    <!--<i class="material-icons right">send</i>-->
+    <!--</button>-->
+
+
 </template>
