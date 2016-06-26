@@ -1,0 +1,27 @@
+<template name="nav">
+    <nav>
+        <div class="nav-wrapper teal">
+            <a href="{{pathFor 'home'}}" class="brand-logo center">아이콘선택</a>
+
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <!--크기가 클 때-->
+            <ul class="left hide-on-med-and-down">
+            <li><a class="button-collapse">menu</a></li>
+        </ul>
+
+            <!--크기가 작아졌을 때-->
+            <ul class="side-nav" id="mobile-demo">
+
+                <li><a class="graph" href="{{pathFor 'graph'}}">국가 선택</a></li>
+                <li><a class="graph" href="{{pathFor 'graph'}}">메인 아이콘 선택</a></li>
+                <li><a class="graph" href="{{pathFor 'graph'}}">서브 아이콘 선택</a></li>
+                <li><a class="graph" href="{{pathFor 'graph'}}">응답 창 선택</a></li>
+                <li><a class="graph" href="{{pathFor 'graph'}}">설정</a></li>
+
+            </ul>
+
+        </div>
+        <!--{{>Router}}-->
+    </nav>
+</template>

@@ -1,0 +1,1 @@
+TE = new Mongo.Collection('te');
