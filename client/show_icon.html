@@ -1,5 +1,5 @@
 <template name="showIcon">
-    <h5>답변을 해주실 수 있겠습니까?</h5>
+    <h1>جواب ڪريو</h1>
     <ul>
         <div class="row valign-wrapper">
             {{#each show}}
@@ -13,4 +13,6 @@
             {{/each}}
         </div>
     </ul>
+    <a class="waves-effect waves-light btn-large red" id="showIcon_cancel" href="{{pathFor 'iconList'}}">Cancel</a>
+    <a class="waves-effect waves-light btn-large" id="showIcon_confirm">Confirm</a>
 </template>

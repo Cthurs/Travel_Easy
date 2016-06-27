@@ -1,7 +1,5 @@
 Meteor.startup(function () {
-    if (TE.find({part:'main'}).count() == 0) {
-        //alert("!!");
-        //alert("카운트 갯수"+TE.find({part:'main'}).count());
+    if (TE.find({part: 'main'}).count() == 0) {
         TE.insert({part: "main", name: 'location_on', sect: 'where'});
         TE.insert({part: "main", name: 'schedule', sect: 'times'});
         TE.insert({part: "main", name: 'attach_money', sect: 'money'});
@@ -16,7 +14,7 @@ Meteor.startup(function () {
         TE.insert({part: "sub", name: 'local_pharmacy', sect: 'where'}); // 약국 아이콘
         TE.insert({part: "sub", name: 'smoking_rooms', sect: 'where'}); // 흡연실 아이콘
 
-//'언제' 섹션
+        //'언제' 섹션
         TE.insert({part: "sub", name: 'flight_land', sect: 'times'}); // 비행기착륙 아이콘
         TE.insert({part: "sub", name: 'flight_takeoff', sect: 'times'}); //비행기이륙 아이콘
         TE.insert({part: "sub", name: 'directions_bus', sect: 'times'}); // 버스 아이콘
@@ -26,7 +24,7 @@ Meteor.startup(function () {
         TE.insert({part: "sub", name: 'movie', sect: 'times'}); // 영화 아이콘
         TE.insert({part: "sub", name: 'call', sect: 'times'}); // 전화 아이콘
 
-//'얼마' 섹션
+        //'얼마' 섹션
         TE.insert({part: "sub", name: 'hotel', sect: 'money'}); //호텔(숙식) 아이콘
         TE.insert({part: "sub", name: 'local_bar', sect: 'money'}); // 칵테일(술) 아이콘
         TE.insert({part: "sub", name: 'local_cafe', sect: 'money'}); // 커피 아이콘
