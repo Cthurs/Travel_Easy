@@ -1,4 +1,41 @@
 Meteor.startup(function () {
+    if(LDB.find({}).count()==0){
+        LDB.insert({
+            country:'eng',
+            answer:'Could you answer my Icon?',
+            cancel:'CANCEL',
+            confirm:'CONFIRM',
+            t_answer:'Please inform date and time',
+            w_answer:'Please draw a map',
+            m_answer:'Please input cost',
+            cost:'Input cost',
+            thanks:'Thank You'
+        });
+
+        LDB.insert({
+            country:'ja',
+            answer:'あたのコをおえくださいが?',
+            cancel:'キャンセル',
+            confirm:'確認',
+            t_answer:'お願い入力日付と時刻',
+            w_answer:'マップを描画してください。',
+            m_answer:'入力してくださいコスト',
+            cost:'チケットください',
+            thanks:'ありがとう'
+        });
+
+        LDB.insert({
+            country:'gr',
+            answer:'la rispondere alla mia Icona?',
+            cancel:'ANNULLA',
+            confirm:'CONFERMARE',
+            t_answer:'Si prega di data e ora di ingresso',
+            w_answer:'Si prega di disegnare una mappa',
+            m_answer:'Si prega di costo dingresso',
+            cost:'Imp t questo st',
+            thanks:'Teyan k così'
+        });
+    }
     if (TE.find({part: 'main'}).count() == 0) {
         TE.insert({part: "main", name: 'location_on', sect: 'where'});
         TE.insert({part: "main", name: 'schedule', sect: 'times'});

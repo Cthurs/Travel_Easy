@@ -1,0 +1,22 @@
+<template name="where">
+    <h5 class="center-align">{{_w_answer}}</h5>
+    <div class="valign-wrapper">
+        <canvas class="valign" id="can" width="250" height="300"></canvas>
+
+        <div id="clr">
+            <div style="background-color:black;" name="pal" value="black"></div>
+            <div style="background-color:green;" name="pal" value="green"></div>
+            <div style="background-color:blue;" name="pal" value="blue"></div>
+            <div style="background-color:red;" name="pal" value="red"></div>
+        </div>
+    </div>
+    <!--//&nbsp;&nbsp;-->
+    <!--<a href="#" id="clear">화면 초기화</a>-->
+    <div class="row">
+        <a class="waves-effect waves-light btn" id="clear">reset</a>
+        <!--<a href="#" id="eraser">지우개</a>-->
+        <a class="waves-effect waves-light btn" id="eraser">eraser</a>
+    </div>
+
+    <h2 class="cyan-text center-align">{{_thanks}}</h2>
+</template>

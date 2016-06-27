@@ -1,18 +1,22 @@
 <template name="showIcon">
-    <h1>جواب ڪريو</h1>
+    <h5 class="center-align">{{please}}</h5>
     <ul>
-        <div class="row valign-wrapper">
+        <div class="row center">
             {{#each show}}
-                <li><i class="big2 material-icons col s4 valign">{{this.name}}</i></li>
+                <li><i class="big2 material-icons col s4 offset-s2">{{this.name}}</i></li>
             {{/each}}
         </div>
 
-        <div class="row center-align">
+        <div class="row center">
             {{#each sub_show}}
-                <li><i class="big2 material-icons col s4">{{this.name}}</i></li>
+                <li><i class="big2 material-icons col s4 offset-s2">{{this.name}}</i></li>
             {{/each}}
         </div>
     </ul>
-    <a class="waves-effect waves-light btn-large red" id="showIcon_cancel" href="{{pathFor 'iconList'}}">Cancel</a>
-    <a class="waves-effect waves-light btn-large" id="showIcon_confirm">Confirm</a>
+    <div class="row">
+        <a class="waves-effect waves-light btn-large red col s6" id="showIcon_cancel"
+           href="{{pathFor 'iconList'}}">{{_cancel}}</a>
+        <a class="waves-effect waves-light btn-large col s6" id="showIcon_confirm"
+           href="{{pathFor whatIcon}}">{{_confirm}}</a>
+    </div>
 </template>
